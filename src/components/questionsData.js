@@ -1,0 +1,386 @@
+// questionsData.js
+
+/**
+ * Versión en español
+ */
+const questionsES = [
+  {
+    id: 1,
+    type: "text",
+    name: "nombre",
+    question: "1. ¿Cuál es tu nombre?",
+    required: true,
+  },
+  {
+    id: 2,
+    type: "select",
+    name: "tipoCabello",
+    question: "2. ¿Cuál es tu tipo de cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "liso", label: "Liso" },
+      { value: "ondulado", label: "Ondulado" },
+      { value: "rizado", label: "Rizado" },
+      { value: "muy-rizado", label: "Muy rizado" },
+    ],
+  },
+  {
+    id: 3,
+    type: "select",
+    name: "grosorCabello",
+    question: "3. ¿Cuál es el grosor de tu cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "fino", label: "Fino" },
+      { value: "medio", label: "Medio" },
+      { value: "grueso", label: "Grueso" },
+    ],
+  },
+  {
+    id: 4,
+    type: "select",
+    name: "densidadCabello",
+    question: "4. ¿Cuál es la densidad de tu cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "escaso", label: "Escaso" },
+      { value: "normal", label: "Normal" },
+      { value: "abundante", label: "Abundante" },
+    ],
+  },
+  {
+    id: 5,
+    type: "select",
+    name: "longitudCabello",
+    question: "5. ¿Cuál es la longitud de tu cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "corto", label: "Corto (hasta la barbilla)" },
+      { value: "medio", label: "Medio (hasta los hombros)" },
+      { value: "largo", label: "Largo (más allá de los hombros)" },
+    ],
+  },
+  {
+    id: 6,
+    type: "select",
+    name: "condicionGeneral",
+    question: "6. ¿Cuál es la condición general de tu cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "sano", label: "Sano" },
+      { value: "seco-quebradizo", label: "Seco o quebradizo" },
+      { value: "graso", label: "Graso" },
+      { value: "mixto", label: "Mixto" },
+    ],
+  },
+  {
+    id: 7,
+    type: "select",
+    name: "tratamientosQuimicos",
+    question: "7. ¿Has sometido tu cabello a tratamientos químicos en los últimos 6 meses?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "no", label: "No" },
+      { value: "tinte-decoloracion", label: "Tinte o decoloración" },
+      { value: "alisado-permanente", label: "Alisado o permanente" },
+      // Se elimina "(especificar)" y se deja sólo "Otro"
+      { value: "otro", label: "Otro" },
+    ],
+  },
+  {
+    id: 8,
+    type: "checkboxGroup",
+    name: "preocupacionesCapilares",
+    question: "8. Selecciona mínimo 3 preocupaciones capilares",
+    required: true,
+    minSelections: 3,
+    options: [
+      { value: "falta-volumen", label: "Falta de volumen" },
+      { value: "frizz", label: "Frizz" },
+      { value: "caida", label: "Caída del cabello" },
+      { value: "puntas-abiertas", label: "Puntas abiertas" },
+      { value: "falta-brillo", label: "Falta de brillo" },
+      { value: "cabello-sin-vida", label: "Cabello sin vida" },
+      { value: "cuero-seco-irritado", label: "Cuero cabelludo seco o irritado" },
+      { value: "exceso-grasa", label: "Exceso de grasa" },
+    ],
+  },
+  {
+    id: 9,
+    type: "select",
+    name: "frecuenciaLavado",
+    question: "9. ¿Con qué frecuencia lavas tu cabello?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "diario", label: "Diario" },
+      { value: "cada-dos-dias", label: "Cada dos días" },
+      { value: "2-3-veces-semana", label: "2-3 veces por semana" },
+      { value: "1-vez-semana-menos", label: "1 vez por semana o menos" },
+    ],
+  },
+  {
+    id: 10,
+    type: "select",
+    name: "usoCalor",
+    question: "10. ¿Usas herramientas de calor con frecuencia? (Secadora, plancha, rizador)",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "no-uso", label: "No las uso" },
+      { value: "ocasional", label: "Ocasionalmente (1-2 veces por semana)" },
+      { value: "frecuente", label: "Frecuentemente (3 o más veces por semana)" },
+    ],
+  },
+  {
+    id: 11,
+    type: "checkboxGroup",
+    name: "productosActuales",
+    question: "11. ¿Utilizas productos para el cuidado del cabello actualmente?",
+    required: true,
+    options: [
+      { value: "shampoo", label: "Shampoo especializado" },
+      { value: "acondicionador", label: "Acondicionador" },
+      { value: "mascarillas", label: "Mascarillas" },
+      { value: "aceites-sueros", label: "Aceites o sueros" },
+      { value: "peinado", label: "Productos de peinado (mousse, gel, laca)" },
+    ],
+  },
+  {
+    id: 12,
+    type: "select",
+    name: "objetivoPrincipal",
+    question: "12. ¿Cuál es tu objetivo principal en el cuidado capilar?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      { value: "hidratacion", label: "Hidratación" },
+      { value: "volumen-cuerpo", label: "Volumen y cuerpo" },
+      { value: "reparacion-fortalecimiento", label: "Reparación y fortalecimiento" },
+      { value: "control-frizz", label: "Control de frizz" },
+      { value: "definicion-rizos", label: "Definición de rizos" },
+      { value: "brillo-suavidad", label: "Brillo y suavidad" },
+    ],
+  },
+  {
+    id: 13,
+    type: "select",
+    name: "ingredientesNaturales",
+    question: "13. ¿Prefieres productos con ingredientes naturales?",
+    required: true,
+    options: [
+      { value: "", label: "Selecciona una opción", disabled: true },
+      {
+        value: "completamente-naturales",
+        label: "Sí, completamente naturales",
+      },
+      { value: "sin-preferencia", label: "No tengo preferencia" },
+      {
+        value: "tecnologia-avanzada",
+        label: "Prefiero combinaciones con tecnología avanzada",
+      },
+    ],
+  },
+];
+
+/**
+ * Versión en inglés
+ */
+const questionsEN = [
+  {
+    id: 1,
+    type: "text",
+    name: "nombre",
+    question: "1. What is your name?",
+    required: true,
+  },
+  {
+    id: 2,
+    type: "select",
+    name: "tipoCabello",
+    question: "2. What is your hair type?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "liso", label: "Straight" },
+      { value: "ondulado", label: "Wavy" },
+      { value: "rizado", label: "Curly" },
+      { value: "muy-rizado", label: "Coily" },
+    ],
+  },
+  {
+    id: 3,
+    type: "select",
+    name: "grosorCabello",
+    question: "3. What is your hair thickness?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "fino", label: "Fine" },
+      { value: "medio", label: "Medium" },
+      { value: "grueso", label: "Thick" },
+    ],
+  },
+  {
+    id: 4,
+    type: "select",
+    name: "densidadCabello",
+    question: "4. What is your hair density?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "escaso", label: "Sparse" },
+      { value: "normal", label: "Normal" },
+      { value: "abundante", label: "Abundant" },
+    ],
+  },
+  {
+    id: 5,
+    type: "select",
+    name: "longitudCabello",
+    question: "5. What is your hair length?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "corto", label: "Short (up to chin)" },
+      { value: "medio", label: "Medium (shoulder length)" },
+      { value: "largo", label: "Long (beyond shoulders)" },
+    ],
+  },
+  {
+    id: 6,
+    type: "select",
+    name: "condicionGeneral",
+    question: "6. What is the overall condition of your hair?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "sano", label: "Healthy" },
+      { value: "seco-quebradizo", label: "Dry or brittle" },
+      { value: "graso", label: "Oily" },
+      { value: "mixto", label: "Combination" },
+    ],
+  },
+  {
+    id: 7,
+    type: "select",
+    name: "tratamientosQuimicos",
+    question: "7. Have you had any chemical treatments in the last 6 months?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "no", label: "No" },
+      { value: "tinte-decoloracion", label: "Coloring or bleaching" },
+      { value: "alisado-permanente", label: "Straightening or perm" },
+      // Se elimina "(please specify)" y se deja "Other"
+      { value: "otro", label: "Other" },
+    ],
+  },
+  {
+    id: 8,
+    type: "checkboxGroup",
+    name: "preocupacionesCapilares",
+    question: "8. Select at least 3 main hair concerns",
+    required: true,
+    minSelections: 3,
+    options: [
+      { value: "falta-volumen", label: "Lack of volume" },
+      { value: "frizz", label: "Frizz" },
+      { value: "caida", label: "Hair loss" },
+      { value: "puntas-abiertas", label: "Split ends" },
+      { value: "falta-brillo", label: "Lack of shine" },
+      { value: "cabello-sin-vida", label: "Lifeless hair" },
+      { value: "cuero-seco-irritado", label: "Dry or irritated scalp" },
+      { value: "exceso-grasa", label: "Excess oil" },
+    ],
+  },
+  {
+    id: 9,
+    type: "select",
+    name: "frecuenciaLavado",
+    question: "9. How often do you wash your hair?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "diario", label: "Daily" },
+      { value: "cada-dos-dias", label: "Every other day" },
+      { value: "2-3-veces-semana", label: "2-3 times a week" },
+      { value: "1-vez-semana-menos", label: "Once a week or less" },
+    ],
+  },
+  {
+    id: 10,
+    type: "select",
+    name: "usoCalor",
+    question: "10. Do you frequently use heated tools? (dryer, straightener, curler)",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "no-uso", label: "I don’t use them" },
+      { value: "ocasional", label: "Occasionally (1-2 times per week)" },
+      { value: "frecuente", label: "Frequently (3+ times per week)" },
+    ],
+  },
+  {
+    id: 11,
+    type: "checkboxGroup",
+    name: "productosActuales",
+    question: "11. Which haircare products do you currently use?",
+    required: true,
+    options: [
+      { value: "shampoo", label: "Specialized Shampoo" },
+      { value: "acondicionador", label: "Conditioner" },
+      { value: "mascarillas", label: "Hair Masks" },
+      { value: "aceites-sueros", label: "Oils or serums" },
+      { value: "peinado", label: "Styling products (mousse, gel, hairspray)" },
+    ],
+  },
+  {
+    id: 12,
+    type: "select",
+    name: "objetivoPrincipal",
+    question: "12. What is your primary haircare goal?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      { value: "hidratacion", label: "Hydration" },
+      { value: "volumen-cuerpo", label: "Volume & body" },
+      { value: "reparacion-fortalecimiento", label: "Repair & strengthening" },
+      { value: "control-frizz", label: "Frizz control" },
+      { value: "definicion-rizos", label: "Curl definition" },
+      { value: "brillo-suavidad", label: "Shine & smoothness" },
+    ],
+  },
+  {
+    id: 13,
+    type: "select",
+    name: "ingredientesNaturales",
+    question: "13. Do you prefer natural ingredients?",
+    required: true,
+    options: [
+      { value: "", label: "Select an option", disabled: true },
+      {
+        value: "completamente-naturales",
+        label: "Yes, completely natural",
+      },
+      { value: "sin-preferencia", label: "No preference" },
+      {
+        value: "tecnologia-avanzada",
+        label: "I prefer advanced technology blends",
+      },
+    ],
+  },
+];
+
+/**
+ * Función para obtener el array de preguntas según el idioma.
+ */
+export function getQuestions(language) {
+  return language === 'en' ? questionsEN : questionsES;
+}

@@ -1,0 +1,40 @@
+.product-card {
+  background-color: rgba(255, 255, 255, 0.1); /* semitransparente, ajusta a tu gusto */
+  color: #fff; /* texto blanco sobre fondo oscuro */
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;              /* Layout en horizontal */
+  flex-direction: row;        /* Eje principal horizontal */
+  align-items: flex-start;    /* Alinea la info arriba */
+  max-width: 600px;           /* Ancho máximo de la tarjeta */
+  width: 100%;                /* Ocupará todo el espacio dentro del contenedor */
+}
+
+.product-card.horizontal {
+  /* Esto es por si quisieras un estilo extra para "horizontal" */
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column; /* Info en columna */
+}
+
+.product-card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.product-card__description {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+  color: #ccc; /* Gris claro */
+}
+
+.product-card__reason {
+  margin: 0 0 0.5rem;
+  color: #ddd;
+}
